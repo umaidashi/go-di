@@ -9,8 +9,9 @@ import (
 const EN = "en"
 const JA = "ja"
 const KR = "kr"
+const CH = "ch"
 
-const LOC = JA
+const LOC = CH
 
 func main() {
 	var greeter greet.GreetInterface
@@ -20,6 +21,8 @@ func main() {
 		greeter = greet.NewGreetInJapanese()
 	} else if LOC == KR {
 		greeter = greet.NewGreetInHangeul()
+	} else if LOC == CH {
+		greeter = greet.NewGreetInChinese()
 	}
 
 	// FOCUS: DI されている関数
