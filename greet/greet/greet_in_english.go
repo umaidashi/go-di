@@ -9,5 +9,5 @@ func NewGreetInEnglish() GreetInterface {
 }
 
 func (g *GreetInEnglish) Greet() {
-	fmt.Println("Hello World")
+	fmt.Println("Hello!")
 }
