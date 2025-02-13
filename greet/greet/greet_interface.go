@@ -1,5 +1,5 @@
 package greet
 
 type GreetInterface interface {
-	Greet()
+	Greet() string
 }

@@ -1,13 +1,11 @@
 package greet
 
-import "fmt"
-
 type GreetInJapanese struct{}
 
 func NewGreetInJapanese() GreetInterface {
 	return &GreetInJapanese{}
 }
 
-func (g *GreetInJapanese) Greet() {
-	fmt.Println("こんにちは!")
+func (g *GreetInJapanese) Greet() string {
+	return "こんにちは!"
 }
