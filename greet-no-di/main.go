@@ -9,8 +9,9 @@ import (
 const EN = "en"
 const JA = "ja"
 const KR = "kr"
+const CH = "ch"
 
-const LOC = EN
+const LOC = CH
 
 func main() {
 	handler := Handler{}
@@ -40,6 +41,8 @@ func (h *Handler) Greet(w http.ResponseWriter, r *http.Request) {
 		msg = greet.GreetInJapanese()
 	} else if LOC == KR {
 		msg = greet.GreetInHangeul()
+	} else if LOC == CH {
+		msg = greet.GreetInChinese()
 	}
 
 	fmt.Fprintln(w, msg)
@@ -53,6 +56,8 @@ func (h *Handler) GreetWithName(w http.ResponseWriter, r *http.Request) {
 		msg = greet.GreetInJapanese()
 	} else if LOC == KR {
 		msg = greet.GreetInHangeul()
+	} else if LOC == CH {
+		msg = greet.GreetInChinese()
 	}
 
 	name := r.URL.Query().Get("name")
