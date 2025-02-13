@@ -1,7 +1,5 @@
 package greet
 
-import "fmt"
-
-func GreetInJapanese() {
-	fmt.Println("こんにちは!")
+func GreetInJapanese() string {
+	return "こんにちは!"
 }

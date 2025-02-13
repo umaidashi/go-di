@@ -1,7 +1,5 @@
 package greet
 
-import "fmt"
-
-func GreetInEnglish() {
-	fmt.Println("Hello!")
+func GreetInEnglish() string {
+	return "Hello!"
 }
